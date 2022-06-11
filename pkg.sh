@@ -12,7 +12,8 @@ then
     echo "You need root access to run this script."
 else 
 
-    Echo "Installation in progress ....."
+    echo "Installation in progress ....."
+    echo "Successfully installed!"
 
     yum install finger -y
     yum install curl -y
