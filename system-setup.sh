@@ -1,7 +1,7 @@
 #!/bin/bash
 ###########################################################################
-# Script      : pkg.sh                                                    #
-# Description : Inventory check.                                          #
+# Script      : system-setup.sh                                           #
+# Description : This script installs finger, curl, zip and vim packages.  #
 # Date        :                                                           #
 # 06/16/2022  : Initial coding: David N Uchieng                           #
 #                                                                         #
@@ -10,17 +10,16 @@
 if [ ${USER} != root ]
 then
     echo "You need root access to run this script."
-else 
-   
-    echo "Checking system inventory ....."
-    echo "Checking memory memory size. Please, wait !"
-    free -m 
-    echo "Checking the number of CPU. Please, wait !"
-    nproc
-    echo "Checking the system hard drives. Please, wait !"
-    lsblk
-    echo "Checking installed OS ...."
-    cat /etc/os-release
-    
+else
+ 
+    echo "Installation in progress ....."
+    echo "Installing finger...."
+    yum install finger -y
+    echo "Installing curl...."
+    yum install curl -y
+    echo "Installing zip...."
+    yum install zip -y
+    echo "Installing vim...."
+    yum install vim -y
 fi
 exit 1
