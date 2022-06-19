@@ -4,7 +4,7 @@
 # Description : This script installs finger, curl, zip and vim packages.  #
 # Date        :                                                           #
 # 06/16/2022  : Initial coding: David N Uchieng                           #
-#                                                                         #
+# 06/17/2022  : Added installation of zip                                 #
 ###########################################################################
 
 if [ ${USER} != root ]
