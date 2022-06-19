@@ -17,6 +17,8 @@ else
     echo "Lift the gas pump and select the gas grade"
 fi
 
+# Determine if user name exist #
+
 echo "Please enter ther username"
 read USER_NAME
 grep ${USER_NAME} /etc/passwd
@@ -27,5 +29,5 @@ then
 else 
    echo "User ${USER_NAME} does not exist on this system"
 fi
-
+############################END############################
  
